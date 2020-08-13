@@ -1,0 +1,45 @@
+{
+  "name": "TODO",
+  "description": "TODO",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "run-p start:dev watch:css",
+    "build": "npm run build:css && sapper build --legacy",
+    "watch:css": "postcss static/global.css -o static/index.css -w",
+    "build:css": "NODE_ENV=production postcss static/global.css -o static/index.css",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "start:dev": "sapper dev",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "polka": "next",
+    "sirv": "^1.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/runtime": "^7.11.2",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@rollup/plugin-replace": "^2.3.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.1.0",
+    "postcss-nested": "^4.2.3",
+    "rollup": "^2.23.1",
+    "rollup-plugin-svelte": "^5.2.3",
+    "rollup-plugin-terser": "^7.0.0",
+    "sapper": "^0.28.0",
+    "svelte": "^3.24.1",
+    "svelte-preprocess": "^4.0.11",
+    "tailwindcss": "^1.6.2"
+  }
+}
