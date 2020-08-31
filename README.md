@@ -45,3 +45,8 @@ This is where your markdown posts live in. All `.md` files in this directory are
 ## 🐛 Bugs and feedback
 
 Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+
+
+https://github.com/Charca/sapper-blog-template
+
+https://github.com/tailwindlabs/tailwindcss-setup-examples
