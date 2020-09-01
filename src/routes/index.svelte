@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   onMount(() => {
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
