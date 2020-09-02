@@ -1,7 +1,7 @@
 <script>
   import Logo from './Logo.svelte'
   import Nav from './Nav.svelte'
-
+  import LocaleToggle from './LocaleToggle.svelte'
   export let segment
 </script>
 
@@ -18,4 +18,5 @@
 <header>
   <Logo />
   <Nav {segment} />
+  <LocaleToggle />
 </header>
