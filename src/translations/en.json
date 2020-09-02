@@ -1,8 +1,10 @@
 {
+  "nav": {
+    "home": "Home",
+    "about": "about",
+    "blog": "blog"
+  },
   "page_title": "Page title",
   "sign_in": "Sign in",
-  "sign_up": "Sign up",
-  "nav": {
-    "home": "Home"
-  }
+  "sign_up": "Sign up"
 }

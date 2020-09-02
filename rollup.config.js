@@ -3,6 +3,7 @@ import replace from "@rollup/plugin-replace";
 import commonjs from "@rollup/plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
+import json from '@rollup/plugin-json'
 import { terser } from "rollup-plugin-terser";
 // import glob from "rollup-plugin-glob";
 import config from "sapper/config/rollup.js";
@@ -39,9 +40,10 @@ export default {
       commonjs(),
       // markdown(),
       // glob(),
+      json(),
       legacy &&
         babel({
-          extensions: [".js", ".mjs", ".html", ".svelte"],
+          extensions: [".js", ".mjs", ".html", ".svelte",".json"],
           runtimeHelpers: true,
           babelHelpers: "runtime",
           exclude: ["node_modules/@babel/**"],
@@ -89,6 +91,7 @@ export default {
       commonjs(),
       // markdown(),
       // glob(),
+      json(),
     ],
     external: Object.keys(pkg.dependencies).concat(
       require("module").builtinModules ||

@@ -1,5 +1,5 @@
 <script>
-  // import { _ } from 'svelte-i18n'
+  import { _ } from 'svelte-i18n'
   export let segment;
 </script>
 
@@ -50,7 +50,7 @@
 </style>
 
 <nav>
-  <!-- <a class='{segment === undefined ? "selected" : ""}' href='.'>{$_('nav.home')}</a> -->
-  <a class='{segment === "about" ? "selected" : ""}' href='about'>about</a>
-  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='posts'>blog</a>
+  <a class='{segment === undefined ? "selected" : ""}' href='.'>{$_('nav.home')}</a>
+  <a class='{segment === "about" ? "selected" : ""}' href='about'>{$_('nav.about')}</a>
+  <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='posts'>{$_('nav.blog')}</a>
 </nav>
