@@ -14,6 +14,20 @@
 </script>
 
 <style>
+  :root{
+    --bg-color: #FFFFFF;
+    --text-color: #000000;
+  }
+
+  :global(body) {
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  :global(body.dark) {
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+  }
   .layout {
     display: flex;
     flex-direction: column;
@@ -26,7 +40,6 @@
     position: relative;
     margin: 0 auto;
     max-width: 1400px;
-    background-color: white;
     padding: 1em 2em;
     box-sizing: border-box;
     width: 100%;
@@ -55,9 +68,7 @@
 
   <footer>
     <span>
-      &copy; {new Date().getFullYear()} Your Blog.
-      Powered by <a href="https://sapper.svelte.dev" target="_blank">Sapper</a>.
-      Template by <a href="https://www.twitter.com/Charca" target="_blank">Maxi Ferreira</a>.
+      &copy; {new Date().getFullYear()} BiscuiTech's blog.
     </span>
   </footer>
 </div>

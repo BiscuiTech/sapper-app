@@ -1,3 +1,6 @@
+<script>
+  import PageHeader from "../components/PageHeader.svelte"
+</script>
 <style>
   figure {
     float: right;
@@ -22,7 +25,7 @@
 </svelte:head>
 
 <div class="container">
-  <h1>About</h1>
+  <PageHeader text="About"/>
   <figure>
     <img src='rsz_florian-klauer-489-unsplash.jpg' alt='Image of a vintage typewriter.'>
     <figcaption>Photo by <a href="https://unsplash.com/@florianklauer" target="_blank">Florian Klauer</a> on Unsplash</figcaption>
