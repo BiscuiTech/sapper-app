@@ -56,6 +56,6 @@
     "sapper": "0.28.7",
     "svelte": "3.24.1",
     "svelte-loader": "2.13.6",
-    "tailwindcss": "1.8.2"
+    "tailwindcss": "1.8.10"
   }
 }
