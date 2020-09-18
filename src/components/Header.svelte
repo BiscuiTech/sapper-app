@@ -24,7 +24,7 @@
 <header class="flex align-baseline items-baseline">
   <Logo />
   <Nav {segment} />
-  <div class="nav-controls flex flex-col justify-center items-center">
+  <div class="nav-controls flex flex-col justify-center items-center mx-2">
     <LocaleToggle />
     <ColorModeSwitch/>
   </div>
