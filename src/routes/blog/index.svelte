@@ -30,6 +30,9 @@
 
 <div class="">
   <PageHeader text="Blog"/>
+  <div class="">
+    <p class="text-blue-400 text-lg dark:text-orange-400">test</p>
+  </div>
   <div class="bg-white pt-16 pb-20 px-4 sm:px-6">
     <div class="relative max-w-lg mx-auto lg:max-w-7xl">
       <div class="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
