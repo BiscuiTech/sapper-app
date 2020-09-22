@@ -31,7 +31,7 @@
     "prismjs": "1.21.0",
     "reading-time": "1.2.0",
     "sirv": "1.0.6",
-    "svelte-i18n": "3.0.4"
+    "svelte-i18n": "3.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
