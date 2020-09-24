@@ -15,7 +15,6 @@
   }
 
   a {
-    color: inherit;
     text-decoration: none;
     padding: 10px 5px;
     display: block;
@@ -49,7 +48,7 @@
   }
 </style>
 
-<nav>
+<nav class="text-gray-900 dark:text-gray-100">
   <a class='{segment === undefined ? "selected" : ""}' href='.'>{$_('nav.home')}</a>
   <a class='{segment === "about" ? "selected" : ""}' href='about'>{$_('nav.about')}</a>
   <a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>{$_('nav.blog')}</a>

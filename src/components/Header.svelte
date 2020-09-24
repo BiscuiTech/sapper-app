@@ -17,15 +17,17 @@
   .nav-controls {
     border-left: 1px lightgray solid;
     margin-left: 4px;
-    padding-left: 4px;
+    padding-left: 8px;
   }
 </style>
 
 <header class="flex align-baseline items-baseline">
   <Logo />
   <Nav {segment} />
-  <div class="nav-controls flex flex-col justify-center items-center mx-2">
+  <div class="absolute top-3 right-3 flex align-baseline text-sm leading-0">
     <LocaleToggle />
-    <ColorModeSwitch/>
+    <!-- <div class="nav-controls">
+      <ColorModeSwitch />
+    </div> -->
   </div>
 </header>
