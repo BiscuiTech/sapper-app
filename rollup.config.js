@@ -1,14 +1,14 @@
+import babel from "@rollup/plugin-babel";
+import commonjs from "@rollup/plugin-commonjs";
+import json from '@rollup/plugin-json';
 import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
-import commonjs from "@rollup/plugin-commonjs";
+import glob from "rollup-plugin-glob";
 import svelte from "rollup-plugin-svelte";
-import babel from "@rollup/plugin-babel";
-import json from '@rollup/plugin-json'
 import { terser } from "rollup-plugin-terser";
-// import glob from "rollup-plugin-glob";
 import config from "sapper/config/rollup.js";
-// import markdown from "./src/utils/markdown.js";
 import pkg from "./package.json";
+import markdown from "./src/utils/markdown.js";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -29,22 +29,25 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        dev,
-        hydratable: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         emitCss: true,
       }),
-      resolve({
+      /* resolve({
         browser: true,
         dedupe: ["svelte"],
-      }),
+      }), */
+      resolve(),
       commonjs(),
-      // markdown(),
-      // glob(),
+      markdown(),
+      glob(),
       json(),
       legacy &&
         babel({
           extensions: [".js", ".mjs", ".html", ".svelte",".json"],
-          runtimeHelpers: true,
+          // runtimeHelpers: true,
           babelHelpers: "runtime",
           exclude: ["node_modules/@babel/**"],
           presets: [
@@ -84,13 +87,15 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        generate: "ssr",
-        dev,
+        compilerOptions: {
+          generate: "ssr",
+          dev,
+        }
       }),
       resolve(),
       commonjs(),
-      // markdown(),
-      // glob(),
+      markdown(),
+      glob(),
       json(),
     ],
     external: Object.keys(pkg.dependencies).concat(
