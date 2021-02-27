@@ -25,7 +25,7 @@
     "date-fns": "2.17.0",
     "gray-matter": "4.0.2",
     "highlight.js": "10.6.0",
-    "marked": "2.0.0",
+    "marked": "2.0.1",
     "netlify-cms": "2.10.93",
     "polka": "0.5.2",
     "prismjs": "1.23.0",
